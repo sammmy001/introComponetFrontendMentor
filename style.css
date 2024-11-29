@@ -26,13 +26,18 @@ h2,p,small ,.trial{
 }
 h2{
     margin-bottom: 20px;
+    color:#FFFEFF;
 }
 p{
     margin-bottom: 30px;
+    color: #FFF1F6;
 }
 .trial{
     background-color: #5D54A3;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 6px;
@@ -54,16 +59,62 @@ form input, button{
 input{
     padding: 15px;
 }
+/* so the input doesn't auto zoom on safari browsers */
 input[type="password"], input[type="email"],input[type="text"]{
     font-size: 16px;
 }
 button{
-    /* display: block; */
     background-color: #3BCA8A;
     color: white;
     border: none;
    
 }
-span{
+button:hover{
+    box-shadow: -1px 4px 10px gold ;
+    transform: scale(1.05);
+    transition: .3s;
+    cursor: pointer;
+}
+button:active{
+    background-color: #0cd279;
+    box-shadow: none;
+}
+a{
     color: #E08586;
+    text-decoration: none;
+}
+
+@media screen and (min-width:700px){
+    .parent{
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+    .coat{
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .left-section{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-right: 100px;
+    }
+    p, h2{
+        text-align: start;
+    }
+    .trial{
+        height: 40px;
+    }
+   
+}
+
+@media screen and (min-width:700px) and (max-width:1050px){
+    .coat{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
 }
