@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: none;
+    box-sizing: border-box;
+}
+.parent{
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./images/bg-intro-mobile.png);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+.coat{
+    /* background-color: bisque; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+h2,p,small ,.trial{
+    text-align: center;
+}
+h2{
+    margin-bottom: 20px;
+}
+p{
+    margin-bottom: 30px;
+}
+.trial{
+    background-color: #5D54A3;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+form{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+form input, button{
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border:2px solid #eeeeee;
+}
+input{
+    padding: 15px;
+}
+button{
+    /* display: block; */
+    background-color: #3BCA8A;
+    color: white;
+    border: none;
+   
+}
+span{
+    color: #E08586;
+}
