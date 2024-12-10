@@ -3,6 +3,10 @@
     padding: none;
     box-sizing: border-box;
 }
+body{
+    font-family: "Poppins", sans-serif;
+    line-height: 25px;
+}
 .parent{
     background-color: hsl(0, 100%, 74%);
     background-image: url(./images/bg-intro-mobile.png);
@@ -14,7 +18,6 @@
     
 }
 .coat{
-    /* background-color: bisque; */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,6 +31,7 @@ h2{
     margin-bottom: 20px;
     color:#FFFEFF;
 }
+
 p{
     margin-bottom: 30px;
     color: #FFF1F6;
@@ -56,13 +60,89 @@ form input, button{
     border-radius: 5px;
     border:2px solid #eeeeee;
 }
-input{
+form input{
     padding: 15px;
+    margin-bottom: 0px;
+    /* for error-shake animation */
+    position:relative ;
+    --left:0;
+    left:var(--left);
+}
+
+input:focus{
+    outline: 2px solid #BDBBC9;
 }
 /* so the input doesn't auto zoom on safari browsers */
 input[type="password"], input[type="email"],input[type="text"]{
     font-size: 16px;
 }
+input:valid{
+    /* background-color:  blue; */
+}
+
+input{
+    padding: 15px;
+    /* for error-shake animation */
+    position:relative ;
+    --left:0;
+    left:var(--left);
+}
+
+.input:not(:focus):invalid{
+    background: url(./images/icon-error.svg) no-repeat 96% center;
+    animation: error-shake 600ms;
+    outline: 2px solid #E08586;
+}
+
+
+@keyframes error-shake{
+    0%{
+    --left:-10px;
+    }
+    20%{
+     --left:8px;
+    }
+    40%{
+     --left:-6px;
+    }
+    60%{
+        --left:4px;
+    }
+    80%{
+        --left:-2px;
+    }
+    100%{
+        --left:0;
+    }
+
+}
+
+
+
+
+
+.list{
+    background: url(./images/icon-error.svg) no-repeat 96% center;
+    /* outline: 2px solid red; */
+}
+
+
+input[type="submit"]:invalid{
+    background-color: #E08586;
+}
+span{
+    color: #E08586;
+    /* background-color: #5D54A3; */
+    text-align: end;
+    font-size: 10px;
+    margin-bottom: 15px;
+  visibility: hidden;
+  /* display:none ; */
+}
+.unHideSpan{
+    visibility: visible;
+}
+
 button{
     background-color: #3BCA8A;
     color: white;
@@ -76,8 +156,14 @@ button:hover{
     cursor: pointer;
 }
 button:active{
-    background-color: #0cd279;
+    background-color: #03ec83;
     box-shadow: none;
+    transform: scale(1.1);
+    transition: .1s;
+}
+
+small{
+    margin-bottom: 10px;
 }
 a{
     color: #E08586;
@@ -105,6 +191,7 @@ a{
     p, h2{
         text-align: start;
     }
+
     .trial{
         height: 40px;
     }
@@ -118,3 +205,19 @@ a{
     }
     
 }
+@media screen and (min-width:1300px){
+    h2{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1340px){
+    .left-section{
+        margin-right: 50px;
+    }
+}
+
+
+
+
+

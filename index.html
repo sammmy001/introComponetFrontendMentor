@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 " >
     <title>intro component</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class="parent">
@@ -19,12 +22,16 @@
         <div class="right-section">
             <div class="trial"> Try it free 7 days then $20/mo. thereafter</div>
             <div class="container">
-                <form action="get">
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                    <input type="email" placeholder="Email Address"  required>
-                    <input type="password" placeholder="Password">
-                    <button>Claim your free trial</button>
+                <form action="get" novalidate id="form" >
+                    <input type="text" class="row" id="fName" placeholder="First Name" required  >
+                    <span id="fNameSpan" >First Name cannot be empty</span>
+                    <input type="text" class="row" id="lName" placeholder="Last Name" required >
+                    <span id="lNameSpan">Last Name cannot be empty</span>
+                    <input type="email" class="row" id="mail" placeholder="Email Address"  required >
+                    <span id="emailSpan" >Email cannot be empty</span>
+                    <input   type="password" id="pWord" class="row" placeholder="Password"  required  >
+                    <span id="passwordSpan">Password cannot be empty</span>
+                    <button type="submit" id="btn" >CLAIM YOUR FREE TRIAL</button>
                     <small> By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
                 </form>
             </div>
@@ -35,4 +42,5 @@
 
 
 </body>
+<script src="./index.js"></script>
 </html>
