@@ -57,25 +57,25 @@ document.getElementById('pWord').addEventListener('click' , () => {
 
 
 
-document.getElementById('btn').addEventListener('click' ,validateEmail)
-function validateEmail() {
+//validate Email seperatelty
+  document.getElementById('form').addEventListener('submit' , (el) =>{
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailRegex.test(email.value) && email.value !== '' ){
-    //    alert('hello world')
+    if(!emailRegex.test(email.value) && email.value != '' ){
+   
        document.getElementById('emailSpan').innerText = " please make sure email is correct";
        document.getElementById('emailSpan').classList.add('unHideSpan')
-       document.getElementById('form').addEventListener('submit', (el) =>{
-        el.preventDefault();
-       })
+       el.preventDefault()
   
     }
     else{
-        // document.body.removeEventListener("click", el);
+      
+    //    alert('good job!!')
     }
-   
-    
-  
-  }
+
+
+  })
+
 
 //add and remove  error-shake animation on mousedown and mouseout respectively
 document.getElementById('btn').addEventListener('mousedown', myFunction);
@@ -85,7 +85,9 @@ function myFunction(){
     document.getElementById('mail').classList.add('input');
     document.getElementById('pWord').classList.add('input');
    
-    document.getElementById('btn').addEventListener('mouseout', myFunction2);
+
+
+document.getElementById('btn').addEventListener('mouseout', myFunction2);
 function myFunction2(){
     document.getElementById('fName').classList.remove('input');
     document.getElementById('lName').classList.remove('input');
